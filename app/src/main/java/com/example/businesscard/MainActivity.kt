@@ -82,14 +82,14 @@ fun PersonalInfoTextAndAvatar(name: String, identity: String, modifier: Modifier
         }
         Row(modifier = Modifier.align(alignment = Alignment.CenterHorizontally)) {
             Icon(Icons.Rounded.Call, contentDescription = null)
-            Text(text = "15067210704")
+            Text(text = stringResource(R.string.Tel_Number))
         }
 
-        Text(text = "     Hi,I am $name(L.L.S stands for 'License Loser Shit'),I am a Criminal.I am wanted because of theft and robbery.",
+        Text(text = stringResource(R.string.Description_1, name),
         modifier = Modifier.align(alignment = Alignment.CenterHorizontally),
             color = Color.Blue
         )
-        Text(text = "By the way,my favorite food is Excrement.",
+        Text(text = stringResource(R.string.Description_2),
             modifier = Modifier.align(alignment = Alignment.CenterHorizontally),
             color = Color.Yellow
         )
