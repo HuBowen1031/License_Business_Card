@@ -7,17 +7,23 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Call
 import androidx.compose.material.icons.rounded.Email
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -46,20 +52,36 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun PersonalInfoTextAndAvatar(name: String, identity: String, modifier: Modifier = Modifier) {
+    var imgNum by remember { mutableStateOf(1) }
+    val ImgSelector = when(imgNum) {
+        1 -> R.drawable.img_1
+        2 -> R.drawable.img_2
+        3 -> R.drawable.img_3
+        4 -> R.drawable.img_4
+        5 -> R.drawable.img_5
+        6 -> R.drawable.img_6
+        else -> R.drawable.img_7
+    }
+    Spacer(modifier = Modifier.padding(100.dp))
     Column(
         verticalArrangement = Arrangement.Center,
-        modifier = Modifier
+        modifier = Modifier,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
             painter = painterResource(
-                id = R.drawable.licensephoto_sized
+                id = ImgSelector
             ),
-            contentDescription = null,
+            contentDescription = "This is License photo number $imgNum",
             //contentScale = ContentScale.None,
             modifier = Modifier
                 .requiredSize(width = 200.dp, height = 200.dp)
                 .align(alignment = Alignment.CenterHorizontally)
         )
+        Button(onClick = {imgNum = (1..6).random()}
+        ) {
+            Text(text = stringResource(R.string.buttonDescription))
+        }
         Text(text = name,
             fontSize = 80.sp,
             //lineHeight = 40.sp,
