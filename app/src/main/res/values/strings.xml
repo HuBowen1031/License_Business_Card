@@ -8,4 +8,7 @@
     <string name="Description_2">By the way,my favorite food is Excrement.</string>
     <string name="Tel_Number" translatable="false">15067210704</string>
     <string name="buttonDescription">Another photo</string>
+    <string name="class_10_beauty">Class 10 Beauty</string>
+    <string name="class_10_beauty_enabled_Notification">Class 10 Beauty enabled.</string>
+    <string name="class_10_beauty_disabled_notification">Class 10 beauty disabled.</string>
 </resources>

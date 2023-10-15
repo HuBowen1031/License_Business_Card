@@ -6,4 +6,7 @@
     <string name="Description_1">     大家好，我叫L.L.S（意思是许可·失败者·史[屎]）。我因偷窃和抢劫而被通缉。</string>
     <string name="Description_2">并且，我最爱的食物是排泄物。</string>
     <string name="buttonDescription">换一张</string>
+    <string name="class_10_beauty">十级美颜</string>
+    <string name="class_10_beauty_enabled_Notification">十级美颜启动。</string>
+    <string name="class_10_beauty_disabled_notification">十级美颜已关闭。</string>
 </resources>
