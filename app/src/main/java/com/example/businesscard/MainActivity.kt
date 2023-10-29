@@ -84,7 +84,11 @@ fun PersonalInfoTextAndAvatar(name: String, identity: String,paramContext : Main
         2 -> R.drawable.se_2
         3 -> R.drawable.se_3
         4 -> R.drawable.se_4
-        else -> R.drawable.se_5
+        5 -> R.drawable.se_5
+        6 -> R.drawable.se_6
+        7 -> R.drawable.se_7
+        8 -> R.drawable.se_8
+        else -> R.drawable.se_9
     }
     val ImgPresenter = if (beautyBool) BeautyImgSelector else ImgSelector
     //Spacer(modifier = Modifier.padding(100.dp))
@@ -103,7 +107,7 @@ fun PersonalInfoTextAndAvatar(name: String, identity: String,paramContext : Main
                 .requiredSize(width = 200.dp, height = 200.dp)
                 .align(alignment = Alignment.CenterHorizontally)
         )
-        Button(onClick = {imgNum = if (beautyBool) (1..7).random() else (1..5).random()}
+        Button(onClick = {imgNum = if (beautyBool) (1..9).random() else (1..7).random()}
         ) {
             Text(text = stringResource(R.string.buttonDescription))
         }
