@@ -11,4 +11,4 @@ This project is for amusement only,and if it violates someone's rights,you are w
 ### Credit
 Thanks for the persons who provided me with Images,helped me test the availability and compatibility on different devices.They made it possible for us to create this project,also preserve those cherished memories.
 
-** Live long and prosper,all of you. **
+**Live long and prosper,all of you.**
